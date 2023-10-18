@@ -1,0 +1,676 @@
+/* FONTES DA PAGINA*/
+
+/* FONTE DA LOGO */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+/* FONTE MENUS */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&display=swap');
+
+/* ESTILO GERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* ROLAGEM SUAVE */
+html{
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: #0d0d0d;
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1080px;
+    /* da um Espaço nas laterais */
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    /* define o flex para todas as div com a classe flex */
+}
+
+.logotipo {
+    font-family: 'Inconsolata', monospace;
+    font-size: 2.5em;
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+.logotipo span {
+    font-family: 'Inconsolata', monospace;
+    color: #0098eb;
+    letter-spacing: 2px;
+    font-weight: 900;
+
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    /* define a altura e largura do botão */
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #0098eb;
+    color: #000;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-social button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #0098eb;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+button:hover,
+form .btn-enviar input:hover {
+    box-shadow: 0px 0px 8px #00a6ff;
+    transform: scale(1.05);
+}
+
+h2.titulo {
+    color: #ffffff;
+    font-size: 2.2em;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: #0098eb;
+}
+
+/* ESTILO SCROLLBAR */
+
+::-webkit-scrollbar{
+    background-color: #202020;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+    width: 8px;
+    background-color: #c7c7c7;
+    border-radius: 15px;
+}
+
+
+
+/* ESTILO DO CABEÇALHO */
+
+header {
+    width: 100%;
+    padding: 20px 8%;
+    /* da uma altura no header dos menus */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+}
+
+header.menu-rolagem {
+    background-color: #000000b2;
+    backdrop-filter: blur(10px); /* adicione o efeito desfoque */
+}
+
+header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* deixa os elementos distantes */
+}
+
+header a {
+    color: #8f8f8f;
+    text-decoration: none;
+}
+
+header .menu-desktop a {
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav.menu-desktop a:hover {
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li {
+    display: inline-block;
+    padding: 0 20px;
+    /* da uma largura entre os menus */
+}
+
+header .interface .btn-social button{
+    width: 40px;
+    height: 40px;
+}
+
+
+/* ESTILO DO MENU MOBILE */
+
+.btn-abrir-menu{
+    display: none;
+}
+
+.btn-abrir-menu i{
+    color: #0098eb;
+    font-size: 30px;
+}
+
+.menu-mobile{
+    background-color: #000000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile .btn-fechar{
+    padding: 20px 8%;
+}
+
+.menu-mobile .btn-fechar i{
+    color: #0098eb;
+    font-size: 1.5em;
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+.menu-mobile nav ul li a{
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+    transition: .5s;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: #0098eb;
+}
+
+.overlay-menu{
+    background-color: #000000a5;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+
+/* ESTILO DO TOPO DO SITE */
+
+section.topo-do-site {
+    padding: 100px 4%;
+    /* 40px é para um espaço na altura | utilzo 4% para o texto nao colar nas laterais ao ficar responsivo */
+}
+
+
+
+section.topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+}
+
+.topo-do-site .txt-topo-site p{
+    font-size: 1em;
+    color: #0098eb;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.topo-do-site .txt-topo-site h1 {
+    color: #ffffff;
+    font-size: 4em;
+    line-height: 60px; /* modifica a altura entre os textos */
+}
+
+.topo-do-site .txt-topo-site h1 .animated {
+    font-size: 25px;
+    font-weight: 600;
+    color: #c7c7c7;
+    display: block; /* joga o texto para a linha de baixo */
+    margin-bottom: 10px;
+}
+
+.topo-do-site .img-topo-site img {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+    /* aplica a animação do keyframe com o nome flutuar */
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+/* ESTILO DA ESPECIALIDADES */
+section.especialidades {
+    padding: 100px 4%;
+    /* 100px é para um espaço na altura | utilzo 4% para o texto nao colar nas laterais ao ficar responsivo */
+    box-shadow: 0 0 40px 10px #ffffff1b;
+
+}
+
+section.especialidades .flex {
+    gap: 60px;
+}
+
+.especialidades .especialidades-box {
+    width: 100%;
+    color: #c7c7c7;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s;
+}
+
+.especialidades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffffff6b;
+}
+
+.especialidades .especialidades-box i {
+    color: #0098eb;
+    font-size: 70px;
+}
+
+.especialidades .especialidades-box h3 {
+    color: #ffffff;
+    font-size: 1.5em;
+    margin: 15px 0px;
+}
+
+/* ESTILO SOBRE */
+section.sobre {
+    padding: 100px 4%;
+    /* 40px é para um espaço na altura | utilzo 4% para o texto nao colar nas laterais ao ficar responsivo */
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .img-sobre img {
+    border-radius: 20px;
+}
+
+.sobre .txt-sobre {
+    color: #ffffff;
+}
+
+.sobre .txt-sobre h2 {
+    font-size: 2.2em;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span {
+    color: #0098eb;
+}
+
+.sobre .txt-sobre p {
+    margin: 20px 0;
+    color: #c7c7c7;
+    text-align: justify;
+}
+
+/* ESTILO DO PORTFÓLIO */
+section.portfolio {
+    padding: 100px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1b;
+}
+
+section.portfolio .flex {
+    justify-content: center;
+    gap: 80px;
+    margin-top: 60px;
+}
+
+.img-port {
+    width: 360px;
+    height: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: 100% 0%;
+    /* define que a imagem vai começar no topo */
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 20px;
+    position: relative;
+    /* utilizado para aplicar efeito overlay */
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+    /* faz a imagem descer para baixo */
+}
+
+.img-port img{
+    width: 250px;
+}
+
+.overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #000000a0;
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+    opacity: 0;
+    transition: .2s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.overlay .btn-social a button{
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    box-shadow: none;
+    transition: .5s;
+}
+
+.overlay .btn-social a button:hover{
+    background-color: #000000;
+}
+
+.overlay .btn-social a button i{
+    font-size: 35px;
+    transition: .5s;
+}
+
+.overlay .btn-social a button:hover i{
+    color: #ffffff; 
+}
+
+.overlay p {
+    text-align: center;
+}
+
+.overlay .em-breve{
+    padding: 20px;
+}
+
+.overlay p span{
+    display: block;
+    
+}
+
+/* ESTILO DO FORMULARIO DE CONTATO */
+section.formulario {
+    padding: 80px 4%;
+}
+
+form {
+    max-width: 500px;
+    /* faz o formulario ficar sempre com essa largura*/
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    background-color: #242424;
+    border: none;
+    outline: none;
+    /* remove a marcação ao clicar no formulario */
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 1em;
+}
+
+form input::placeholder {
+    color: #c7c7c7;
+}
+
+form textarea {
+    resize: none;
+    /* bloqueia o redimensionamento do textarea */
+    height: 200px;
+}
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input {
+    width: 120px;
+    background-color: #0098eb;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+
+/* ESTILO DO RODAPÉ */
+footer {
+    padding: 60px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1b;
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+.borda {
+    border-top: 2px solid #0098eb;
+}
+
+footer .line-footer p i {
+    color: #0098eb;
+    font-size: 22px;
+    margin-right: 5px;
+}
+
+footer .line-footer p a {
+    color: #c7c7c7;
+    text-decoration: none;
+}
+
+footer .line-footer p{
+    color: #c7c7c7;
+}
+
+/* ESTILO REDMENCIONAMENTO*/
+
+@media screen and (max-width: 1166px) {
+
+    /* CLASSES GERAIS */
+    .flex {
+        flex-direction: column;
+    }
+
+    
+
+    h2.titulo {
+        font-size: 2em;
+        line-height: 40px;
+    }
+
+    /* MENU MOBILE */
+    .btn-abrir-menu{
+        display: block;
+    }
+
+
+    /* CABEÇALHO */
+
+    .logotipo {
+        font-size: 2.2em;
+    }
+
+    .menu-desktop, header .interface .btn-social button {
+        display: none;
+    }
+
+
+
+
+    /* TOPO DO SITE */
+
+    section.topo-do-site .flex {
+        gap: 0px;
+    }
+
+    section.topo-do-site .txt-topo-site{
+        text-align: center;
+    }
+
+    section.topo-do-site {
+        padding: 160px 8%;
+        /* 40px é para um espaço na altura | utilzo 4% para o texto nao colar nas laterais ao ficar responsivo */
+    }
+
+    .topo-do-site .txt-topo-site h1 {
+        font-size: 2.5em;
+        line-height: 45px;
+    }
+
+    .topo-do-site .txt-topo-site h1 .animated {
+        font-size: 17px;
+    }
+    
+
+    .topo-do-site .img-topo-site img {
+        width: 100%;
+    }
+
+
+    /* ESTILO DA ESPECIALIDADES */
+    section.especialidades {
+        padding: 100px 8%;
+        /* 40px é para um espaço na altura | utilzo 4% para o texto nao colar nas laterais ao ficar responsivo */
+    }
+
+
+
+    /* SOBRE */
+
+    section.sobre {
+        padding: 100px 8%;
+        /* 40px é para um espaço na altura | utilzo 4% para o texto nao colar nas laterais ao ficar responsivo */
+    }
+
+    section.sobre .flex{
+        gap: 25px;
+    }
+
+    .sobre .flex{
+        flex-direction: column-reverse;
+    }
+
+    .sobre .txt-sobre h2 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .btn-social{
+        text-align: center;
+    }
+
+    .sobre .img-sobre img {
+        width: 100%;
+    }
+
+
+
+
+    /* PORTFÓLIO */
+
+    section.portfolio {
+        padding: 100px 8%;
+    }
+
+    .img-port {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+
+
+    /* FODAPÉ */
+
+    footer .flex{
+        gap: 30px;
+    }
+
+    footer {
+        padding: 100px 8%;
+        text-align: center;
+    }
+
+
+}
+
+@media screen and (max-width: 360px) {
+    .topo-do-site .txt-topo-site h1 {
+        font-size: 2em;
+    }
+}
