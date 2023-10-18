@@ -14,6 +14,9 @@
     <!-- JAVASCRIPT EFEITO MAQUINA DE ESCREVER -->
     <script src="javascript/txt.js" defer></script>
     <script crossorigin="anonymous" src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js" defer></script>
+    <!-- LINK JQUERY PARA MÁSCARA DO TELEFONE -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     <!-- LINK DOS ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
@@ -205,7 +208,7 @@
 
                     <input type="text" name="email" id="" placeholder="Seu e-mail:" required>
 
-                    <input type="text" name="telefone" id="" placeholder="Seu telefone:">
+                    <input type="text" name="telefone" id="phone_with_ddd" placeholder="Seu telefone:">
 
                     <textarea name="mensagem" id="" placeholder="Sua mensagem" required></textarea>
 
@@ -214,6 +217,12 @@
                     </div><!-- btn-enviar -->
 
                 </form>
+
+                <!-- SCRIPT DA MÁSCARA DO TELEFONE -->
+                <script>
+                    $('#phone_with_ddd').mask('(00) 00000-0000');
+                </script>
+                
             </div><!-- interface -->
         </section><!-- formulario -->
 
