@@ -14,9 +14,9 @@
     font-family: 'DM Sans', sans-serif;
 }
 
-/* ROLAGEM SUAVE */
+
 html{
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* ROLAGEM SUAVE */
 }
 
 
