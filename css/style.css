@@ -368,7 +368,7 @@ section.portfolio .flex {
 }
 
 .img-port {
-    width: 360px;
+    width: 310px;
     height: 460px;
     display: flex;
     align-items: center;
@@ -390,6 +390,22 @@ section.portfolio .flex {
 
 .img-port img{
     width: 250px;
+}
+
+.img-port-comum{
+    width: 310px;
+    height: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    /* define que a imagem vai começar no topo */
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 20px;
+    position: relative;
+    /* utilizado para aplicar efeito overlay */
 }
 
 .overlay {
