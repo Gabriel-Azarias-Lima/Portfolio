@@ -669,6 +669,12 @@ footer .line-footer p{
         margin: 0 auto;
     }
 
+    .img-port-comum{
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
 
 
     /* FODAPÉ */
